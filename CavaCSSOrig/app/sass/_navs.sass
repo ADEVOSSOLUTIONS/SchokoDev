@@ -1,0 +1,78 @@
+// Стили для навигационного меню
+.top-nav
+  position: absolute
+  top: 160px
+  width: 100%
+  z-index: 9
+  left: 0
+
+  &.fixed-top
+    top: 0
+    position: fixed
+    background-color: $wh
+    +bxsh(0,10,25)
+  li
+    a
+      text-transform: uppercase
+      line-height: 40px
+      padding: 0 25px
+      +em(15)
+      font-weight: 600
+      color: $accent
+      transition-duration: .3s
+      opacity: 1
+      &:hover
+        opacity: .5
+    &.current-menu-item
+      a
+        color: #8a8073
+// Мобильное меню
+.mobile-nav
+  top: 0
+  left: 0
+  width: 100%
+  position: fixed
+  background-color: $wh
+  color: $accent
+  z-index: 9
+  display: none
+  .top-panel
+    height: 60px
+    line-height: 60px
+    position: relative   
+  .mobile-logo
+    height: 50px
+    float: left
+    margin-left: 15px
+    img
+      max-height: 100%
+  .mobile-menu-button
+    width: 50px
+    height: 60px
+    position: absolute
+    right: 0
+    top: 0
+    i
+      font-size: 30px
+  .open-menu
+    position: fixed
+    left: 100%
+    width: 100%
+    height: calc(100% - 60px)
+    top: 60px
+    background-color: $wh
+    border-top: lighten($accent,00%) solid 1px
+    text-align: left
+    transition-duration: .3s
+    &.opened
+      left: 0
+    &>ul
+      padding: 15px 15px 0
+      a
+        display: block
+        padding: 15px 0
+        text-transform: uppercase
+    .social-block
+      margin-left: 5px
+      margin-top: 15px
+        

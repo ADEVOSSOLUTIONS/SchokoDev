@@ -1,0 +1,166 @@
+@import "bourbon"
+@import "vars"
+
+// Все устройства до 1024
+@media only screen and (max-width:1023px)
+  .top-nav,.top-section
+    display: none
+  .mobile-nav
+    display: block
+  .front-page h2, h2
+    +em(24)
+  .header
+    height: auto
+    margin-bottom: 60px
+  h1
+    +em(40)
+  .main-slider
+    height: 380px
+    .slick-slide
+      height: 380px
+      padding-top: 50px
+    .slider-title
+      +em(30)
+      &:after
+        width: 100px !important
+    .slider-desc
+      +em(16)
+  .product-cards 
+    .card
+      margin-bottom: 15px
+    .col-md-4
+      h3
+        +em(24)
+  .selection-table 
+    li
+      height: 150px
+      svg,img
+        max-height: 100px
+      h4
+        +em(16)
+
+  .selection-image 
+    height: 300px
+    .slick-slide
+      height: 300px
+      h6
+        +em(14)
+        padding: 0 20px
+        padding-bottom: 20px
+  .reservation-block
+    height: auto
+  .form-block
+    margin-top: 70px
+  .footer-logo
+    margin-bottom: 30px
+  .footer-second-col
+    margin-bottom: 30px
+  .catalogue-block1-right-img
+    margin-top: 45px
+    img
+      position: relative
+      left: 0
+      top: 0
+  .catalogue-block1-cover-img
+    bottom: 0px
+    left: 0
+    max-width: 100px
+    // margin: -0px
+    right: initial
+  .catalogue-items-block
+    li
+      height: auto
+      overflow: hidden
+      padding-bottom: 30px
+      .catalogue-text
+        margin-left: 0
+// Только маленькие мобилки
+@media only screen and (max-width:480px)
+
+// Только мобилки
+@media only screen and (max-width:767px)
+  .reviews-text-slider
+    &:after,&:before
+      display: none
+  .support-table-block table tr td
+    padding-left: 20px
+  .verleih-block2-cards
+    .card
+      margin-bottom: 15px
+      h4
+        padding-left: 15px
+        padding-right: 15px
+// Только от средних мобилок до планшета
+@media only screen and (min-width:480px) and (max-width:767px)
+
+// От средних мобилок до 1024
+@media only screen and (min-width:480px) and (max-width:1023px)
+
+// От планшета до 1024 
+@media only screen and (min-width:768px) and (max-width:1023px)
+  .product-cards
+    .col-md-3
+      width: 50%
+      float: left
+    .col-md-4
+      width: 33.3333%
+      float: left
+      h3
+        +em(18)
+      .card h6
+        +em(14)
+  .footer
+    .col-md-3
+      width: 14%
+      float: left
+      .footer-logo
+        margin-left: 0
+        margin-top: 0
+    .col-md-5,.col-md-4
+      width: 43%
+      float: left
+  .catalogue-block1 p
+    max-width: 100%
+  .catalogue-block1-cover-img
+    bottom: -20px
+    max-width: 100%
+  .catalogue-items-block
+    li
+      width: calc(50% - 30px)
+      float: left
+      // padding: 0 15px
+      margin: 15px 15px
+  .verleih-block2-cards
+    .col-md-4
+      width: 33.333%
+      float: left
+      .card
+        h4
+          padding-left: 10px
+          padding-right: 10px
+// От 1024 до нормальных мониторов 
+@media only screen and (min-width:1024px) and (max-width:1200px)
+  .top-nav
+    li
+      a
+        padding: 0 10px
+  .selection-table
+    h4
+      +em(21)
+  .catalogue-items-block
+    li
+      .catalogue-text
+        width: 560px
+// От нормальных мониторов
+@media only screen and (min-width:1200px)
+
+// Большие мониторы
+@media only screen and (min-width:1400px)
+
+// Очень большие мониторы
+@media only screen and (min-width:1800px)
+
+// Портретная ориентация
+@media only screen and (min-height:769px)
+// Обычная ориентация
+@media only screen and (max-height:769px)

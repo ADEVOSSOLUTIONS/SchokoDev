@@ -1,0 +1,188 @@
+// Стили для форм
+// Табы переключения форм
+.form-tabs
+  text-align: left
+  +pseudoa
+  overflow: hidden
+  &:after
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 5px
+    background-color: $accent
+  li
+    float: left
+    background-color: $wh  
+    color: $accent
+    line-height: 50px
+    cursor: pointer
+    padding: 0 20px
+    min-width: 116px
+    text-align: center    
+    &.current
+      background-color: $accent
+      color: $wh
+  &-content
+    padding: 9px
+    background-color: #fff
+    li
+      display: none      
+      background-color: $wh
+      color: $accent
+      min-height: 200px
+      padding-top: 30px
+      padding-bottom: 20px
+      &.current-tab
+        display: block        
+      .form-section
+        &:last-of-type
+          margin-bottom: 0
+        &:before
+          counter-increment: form
+          content: counter(form)
+// Секция формы для ввода
+.form-section
+  padding: 0 30px 0 60px
+  text-align: left
+  margin-bottom: 25px
+  padding-top: 15px
+  +pseudo
+  &:before
+    width: 50px
+    +em(22)
+    font-family: $ldg
+    left: -9px
+    top: 0
+    text-align: center
+    line-height: 50px
+    color: $wh
+    background-color: #431812
+  &:after
+    width: 37px
+    height: 13px
+    left: 3px
+    top: 57px
+    background-image: url(../img/form-dec.png)
+  h5
+    font-weight: 900
+    font-family: $c
+    letter-spacing: 2px
+    margin-bottom: 15px
+  .checkbox-block
+    +em(13)
+    font-family: $rlw
+    margin-top: 20px
+    &>div
+      display: inline-block
+      vertical-align: top      
+    .checkbox-input
+      margin-right: 10px
+      input
+        cursor: pointer
+        border: none
+        border-radius: 0
+        width: 14px
+        height: 14px
+        display: block
+        position: relative
+        &:after,&:before
+          position: absolute
+          content: ""
+          left: 0
+          top: 0
+          width: 14px
+          height: 14px
+          z-index: 1
+          background-color: #fff
+        &:after
+          z-index: 2
+          opacity: 0
+          background-image: url(../img/checked.png)
+          background-repeat: no-repeat
+          background-position: center
+          transition-duration: .3s
+        &:checked
+          visibility: visible
+          &:after
+            opacity: 1
+            
+  .select-input,.date-input
+    +em(14)
+    select,input
+      background-color: transparent
+      font-family: $rlw
+      font-weight: 500
+      color: #9d8987
+      display: block
+      width: 100%
+      padding: 12px 18px
+      border: $accent solid 1px
+    .ui-selectmenu-button
+      outline: none !important
+      font-family: $rlw
+      font-weight: 500
+      color: #9d8987
+      width: 100%
+      line-height: 40px
+      padding: 0 18px
+      border: $accent solid 1px
+      border-radius: 0
+      background-color: transparent
+    .ui-selectmenu-icon
+      line-height: 40px
+      top: 16px
+      background-image: url(../img/arrow-down.png) !important
+      background-position: center !important
+      width: 8px
+      height: 6px
+
+
+.date-input
+  +pseudoa
+  &:after
+    right: 0
+    height: 42px
+    top: 0
+    width: 45px
+    background-image: url(../img/date.png)
+    background-repeat: no-repeat
+    background-position: center
+                
+.checkbox-active
+  display: none
+
+
+// Секция отправки формы
+.submit-section
+  padding: 30px 0
+  background-color: #603c34
+  .input-wrapper
+  input
+    display: inline-block
+    +em(14)
+    line-height: 52px
+    padding: 0 26px
+    font-family: $rlw
+    font-weight: 600
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    color: $accent
+    background-image: url(../img/submit.png)
+
+// Переопределение стилей плагина Jquery UI под дизайн
+.ui-menu-item
+  outline: none !important
+  text-align: left
+  .ui-menu-item-wrapper
+    display: block
+    font-family: $rlw
+    line-height: 1.2px
+    padding: 15px 18px !important
+    background-color: $wh
+    color: $accent
+    outline: none !important
+    border: none !important
+    &.ui-state-active
+      background-color: $accent
+      color: $wh    

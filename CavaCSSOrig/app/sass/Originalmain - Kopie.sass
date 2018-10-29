@@ -1,0 +1,918 @@
+@import "bourbon"
+@import "vars"
+@import "libs"
+
+@import "navs"
+@import "forms"
+@import "popup"
+@import "plugins"
+
+// Фоновое изображение всей страницы
+body
+  background-image: url(../img/background.jpg)
+// Оформление заголовков h2
+.front-page h2,h2
+  background-image: url(../img/Vector_title.svg)
+  &:after,&:before
+    background-image: url(../img/Vector_side_title.svg)
+
+// Cтили главного слайдера
+.slider-title
+  +em(72)
+  font-weight: 600
+.main-slider
+  height: 535px
+  background-color: #fff
+  overflow: hidden
+  &>ul
+    opacity: 0
+    transition-duration: .3s
+  .slick-initialized
+    opacity: 1 !important
+  .slick-slide
+    height: 535px
+    background-position: center
+    background-size: cover
+    color: #fff
+    padding-top: 140px
+    overflow: hidden
+    +pseudob
+    &:before
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      z-index: 0
+      background-color: #000
+      opacity: .33
+    .slider-title
+      padding-bottom: 22px
+      margin-bottom: 42px
+      +pseudoa
+      &:after
+        bottom: 0
+        left: 0
+        right: 0
+        width: 300px
+        max-width: 100%
+        height: 2px
+        margin: auto
+        background-color: #fff
+  .slider-desc
+    +em(22)
+    font-weight: 500
+  .slick-dotted.slick-slider
+    margin-bottom: 0
+  .slick-dots
+    line-height: 1
+    bottom: 55px
+    li
+      width: 14px
+      height: 14px
+      text-align: center
+      line-height: 14px
+      // display: inline-block
+      border: transparent solid 2px
+      transition-duration: .3s
+      border-radius: 50%
+      button
+        width: 8px
+        height: 8px
+        display: inline-block
+        vertical-align: top
+        
+        background-color: transparent
+        border-radius: 50%
+        background-color: #fff
+        &:before
+          content: ""
+      &.slick-active
+        
+        border-color: #fff
+        button
+          background-color: transparent  
+ 
+// Стили хедера(верхней панели) 
+.header
+  height: 220px
+  background-image: url(../img/top-vectors.png)
+  background-position: top center
+  background-repeat: no-repeat
+  .top-section
+    height: 180px
+    +pseudo
+    &:after,&:before
+      top: 12px
+      width: 66px
+      height: 59px
+      background-size: 100%
+    &:after
+      background-image: url(../img/c-top-right.png)
+      right: 0
+    &:before
+      background-image: url(../img/c-top-left.png)
+      left: 0
+  .social-block
+    line-height: 180px
+    margin-left: 30px
+  .center-header
+    line-height: 180px
+    a
+      width: 195px
+      text-align: right
+      display: inline-block
+      transition-duration: .3s
+      &:hover
+        filter: brightness(150%)
+  .logo
+    vertical-align: middle   
+    max-height: 137px
+
+// Соц иконки    
+.social-block
+  text-align: left
+  li
+    display: inline-block
+    vertical-align: middle
+  a
+    display: inline-block
+    width: 41px
+    height: 39px
+    text-align: center
+    color: $accent
+    line-height: 39px
+    margin: 0 10px
+    background-image: url(../img/frame.png)
+    transition-duration: .3s
+    &:hover
+      font-size: 18px
+      color: $accent
+
+// Блок с продуктами на главной странице  
+.main-products-block
+  padding-top: 60px
+  padding-bottom: 100px
+  color: $accent
+  h2
+    margin-bottom: 45px
+    background-image: url(../img/Vector_title_products.svg) !important
+    &:after,&:before
+      background-image: url(../img/Vector_side_title_products.svg) !important
+  h5
+    font-weight: 500
+    max-width: 650px
+    margin: 0 auto
+
+// Карточки продуктов
+.product-cards
+  margin-top: 80px
+  color: $wh
+  &-content
+    position: relative
+    z-index: 3
+  .card
+    color: #fff
+    height: 341px
+    overflow: hidden
+    background-size: cover
+    background-position: center
+    transition-duration: .3s
+    &:hover
+      transform: scale(1.1)
+    h3
+      padding-left: 10px
+      padding-right: 10px
+      +pseudoa
+      text-transform: uppercase
+      letter-spacing: 1px
+      margin-top: 115px
+      padding-bottom: 18px
+      margin-bottom: 25px
+      &:after
+        width: 48px
+        height: 1px
+        background-color: #fff
+        left: 0
+        right: 0
+        bottom: 0
+        margin: auto
+    h6
+      padding: 0 25px
+      font-weight: 500
+    +pseudo
+    &:before
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background-color: #000
+      opacity: .44
+      z-index: 0
+    &:after
+      left: 9px
+      top: 11px
+      border: #fff solid 1px
+      width: calc(100% - 18px)
+      height: calc(100% - 22px)
+
+// Блок выбора услуг
+.select-block
+  background-image: url(../img/seletct-bg.jpg)
+  color: $wh
+  background-position: center
+  background-size: cover
+  
+.select-block,.reservation-block
+  h2
+    margin-bottom: 90px
+    background-image: url(../img/Vector_title_select.svg) !important   
+    &:after,&:before
+      background-image: url(../img/Vector_side_title.svg) !important      
+
+.selection-table
+  overflow: hidden
+  li
+    width: 50%
+    float: left
+    height: 200px
+    position: relative
+    background-color: #ece8d5
+    overflow: hidden
+    color: $accent
+    cursor: pointer
+    +pseudo
+    &:after
+      left: 9px
+      top: 10px
+      width: calc(100% - 18px)
+      height: calc(100% - 20px)
+      border: $wh solid 2px
+    svg,img
+      max-height: 100%
+      max-height: 130px
+      transition-duration: .3s
+      color: $accent
+      fill: $accent
+    &:hover
+      background-color: $accent
+      opacity: .8
+      color: $wh
+      img,svg
+        color: $wh
+        fill: $wh
+
+  .current-selection
+    color: $wh
+    background-color: $accent
+    img,svg
+      color: $wh
+      fill: $wh
+
+.selection-image
+  height: 400px
+  margin-left: -15px
+  color: $wh
+  @include respond-to(mobile)
+    margin-left: 0
+  h6
+    position: absolute
+    z-index: 1
+    left: 0
+    width: 100%
+    bottom: 0
+    padding: 0 60px
+    font-weight: 500
+    line-height: 1.5
+    padding-bottom: 40px
+    opacity: .8
+  .slick-slider
+    margin-left: -15px
+    @include respond-to(mobile)
+      margin-left: 0
+  .slick-slide
+    height: 400px
+    background-position: center
+    background-size: cover
+    +pseudob
+    &:before
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background-color: #000
+      opacity: .5
+      z-index: 1
+
+// Блок с формой на главной
+.reservation-block
+  background-image: url(../img/reserv-bg.jpg)
+  color: $wh
+  height: 1000px
+  overflow: hidden
+  background-position: center
+  background-size: cover
+
+.reservation-text
+  text-align: left
+  color: #f4f0e3
+  h3
+    +em(30)
+    font-weight: 600
+    padding-bottom: 32px
+    margin-bottom: 50px
+    +pseudoa
+    &:after
+      left: 0
+      bottom: 0
+      width: 100px
+      height: 2px
+      background-color: #f4f0e3
+  p
+    max-width: 500px
+    line-height: 1.7
+    font-weight: 500
+    color: $wh
+    margin-bottom: 45px
+    &:last-of-type
+      margin-bottom: 0
+.readmore
+  display: inline-block
+  vertical-align: top
+  line-height: 46px
+  padding: 0 32px
+  background-color: #e5dcc3
+  color: $accent
+  +em(13)
+  font-weight: 700
+  text-transform: uppercase
+  transition-duration: .3s
+  &:first-letter
+    font-size: 18px
+
+
+// Стили футера      
+.footer
+  .container
+    padding-top: 75px
+    padding-bottom: 70px
+    +pseudo
+    &:after,&:before
+      bottom: 20px
+      width: 66px
+      height: 59px
+      background-size: 100%
+
+    &:after
+      background-image: url(../img/c-bottom-right.png)
+      right: 0
+      
+    &:before
+      background-image: url(../img/c-bottom-left.png)
+      left: 0
+  text-align: left
+  
+  h5
+    font-weight: 700
+    font-family: $c
+    margin-bottom: 33px
+  p
+    max-width: 335px
+    margin-bottom: 42px
+    +em(14)
+    font-weight: 500
+    line-height: 1.6
+  .footer-second-col
+    p
+      max-width: 270px
+  &-logo
+    max-width: 135px
+    margin-left: 25px
+    margin-top: 20px
+  .social-block
+    ul
+      margin-left: -10px
+  .footer-info-block
+    color: #4b1008
+    ul
+      margin-left: -5px
+    li
+      font-family: $os
+      width: 100%
+      display: block
+      font-size: 15px
+      // margin-bottom: 20px
+      line-height: 42px
+      i
+        width: 30px
+        text-align: center
+        overflow: hidden
+        display: inline-block
+        vertical-align: top
+        line-height: 42px
+        margin-right: 10px
+        font-size: 18px 
+      .icon-mobile
+        font-size: 24px
+
+
+// Страница VERLEIH CHAMPAGNER
+
+// Блок с продуктами
+.champ-products-block
+  h2
+    color: $accent
+    background-image: url(../img/Vector_title_products.svg) !important
+    &:after,&:before
+      background-image: url(../img/Vector_side_title_products.svg) !important
+  .product-cards
+    margin-top: 55px
+    .card
+      &:before
+        opacity: .25
+      height: 435px
+      h3
+        margin-top: 130px
+        margin-bottom: 33px
+        padding-left: 20px
+        padding-right: 20px
+      h6
+        +em(16)
+        height: 105px
+        overflow: hidden
+        padding: 0 42px
+
+// 2й блок        
+.vechicles-block
+  background-color: #fff
+  h2
+    margin-bottom: 55px
+    color: $accent
+    background-image: url(../img/Vector_title_products.svg) !important
+    &:after,&:before
+      background-image: url(../img/Vector_side_title_products.svg) !important
+
+.fountain-text-cols
+  padding-top: 45px
+  li
+    height: 150px
+    overflow: hidden
+    padding-top: 5px
+    margin-bottom: 45px
+  text-align: left
+  .img-side
+    width: 80px
+    float: left
+    height: 100px
+    overflow: hidden
+    
+    img,svg
+      max-width: 55px
+      display: block
+      margin: 0 auto
+      color: $accent
+      fill: $accent
+    .rocket-fix
+      max-width: 85px
+      position: relative
+      top: -20px
+      transform: rotate(20deg)
+  .text-side
+    padding-bottom: 10px
+    float: left
+    width: calc(100% - 90px)
+    color: $accent
+      
+  h4
+    font-weight: 700
+    margin-bottom: 15px
+    margin-top: -5px
+  p
+    +em(14)
+    font-weight: 500
+.fountain-text-left
+  .text-side
+    padding-right: 14px
+    h4
+      text-align: right
+    border-right: #e6dddc solid 1px
+.fountain-text-right
+  .text-side
+    width: calc(100% - 80px)
+    float: right
+    padding-left: 14px
+    border-left: #e6dddc solid 1px
+
+// Блок отзывов
+.reviews-block
+  height: 507px
+  color: $wh
+  background-position: center
+  background-size: cover
+  background-image: url(../img/revs-bg.jpg)
+  h2
+    margin-bottom: 55px
+    background-image: url(../img/Vector_title_select.svg) !important
+    &:after,&:before
+      background-image: url(../img/vector_side_title_select.svg) !important
+.reviews-icon-slider
+  max-width: 420px
+  margin: 0 auto
+  ul
+    opacity: 0
+    transition-duration: .3s
+  .slick-initialized
+    opacity: 1 !important
+  .slick-slide
+    cursor: pointer
+    padding-top: 20px
+    &.slick-active
+    .img
+      width: 70px
+      height: 70px
+      padding-top: 20px
+      border-radius: 50%
+      overflow: hidden
+      position: relative
+      margin-left: 3px
+      margin-right: 3px
+      img
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        +ofc
+  .slick-center
+    padding-top: 0
+    .img
+      width: 110px
+      height: 110px
+      padding-top: 0
+      border: rgba($wh,.7) solid 1px
+      img
+        width: 100px
+        right: 0
+        bottom: 0
+        margin: auto
+        height: 100px
+.reviews-text-slider
+  color: #e5dcc3
+  ul
+    opacity: 0
+    transition-duration: .3s
+  .slick-initialized
+    opacity: 1 !important
+  max-width: 510px
+  margin: 15px auto 0
+  position: relative
+  +pseudo
+  &:after,&:before
+    width: 47px
+    height: 35px
+    top: 33px
+  &:after
+    right: -57px
+    background-image: url(../img/qr.png)
+    
+  &:before
+    left: -57px
+    background-image: url(../img/ql.png)
+  h4
+    +em(22)
+    font-weight: 700
+    margin-bottom: 25px
+  p
+    font-style: italic
+    font-weight: 500
+
+// Блок тарифов    
+.tarifs-block
+  background-color: #fff
+  h2
+    margin-bottom: 55px
+    color: $accent
+    background-image: url(../img/Vector_title_products.svg) !important
+    &:after,&:before
+      background-image: url(../img/Vector_side_title_products.svg) !important
+
+.tarif
+  color: #fff
+  height: 383px
+  padding-top: 30px
+  transition-duration: .3s
+  &:hover
+    opacity: .9
+    transform: scale(1.1)
+  h4
+    font-weight: 700
+    text-transform: uppercase
+    
+    margin-bottom: 20px
+  .tarif-price
+    font-family: $os
+    +em(36)
+    font-weight: 600
+    margin-bottom: 37px
+    &:after
+      content: "$"
+      font-size: 18px
+  p
+    padding-top: 8px
+    margin-bottom: 7px
+    +em(14)
+    font-weight: 400
+    +pseudob
+    &:before
+      top: 0
+      left: 0
+      right: 0
+      width: 175px
+      margin: auto
+      height: 1px
+      opacity: .17
+      background-color: #fff
+  .readmore
+    margin-top: 27px
+    line-height: 36px
+    +em(10)
+    text-transform: uppercase
+    padding: 0 19px
+    color: #fff
+    background-color: transparent
+    border: #fff solid 1px
+    transition-duration: .3s
+    &:first-letter
+      font-size: 14px
+    &:hover
+      background-color: #fff
+.basic
+  background-color: #4d7f73
+  .readmore
+    &:hover
+      color: #4d7f73 
+.standart
+  background-color: #797c45
+  .readmore
+    &:hover
+      color: #797c45
+.premium
+  background-color: #894d61
+  .readmore
+    &:hover
+      color: #894d61
+.gold
+  background-color: #4d6b7f
+  .readmore
+    &:hover
+      color: #4d6b7f
+
+// Страница SUPPORT
+// Общие стили для блоков 
+.support-block
+  color: $accent
+  h5
+    margin-top: 30px
+    font-weight: 500
+    margin-bottom: 60px
+  p
+    font-weight: 500
+    line-height: 1.4
+    margin-bottom: 25px
+// 1й блок
+.support-block1
+  color: $accent
+  padding-bottom: 50px
+  background-image: url(../img/texture.jpg)
+  background-size: cover
+  background-position: center
+  h5
+    text-transform: uppercase
+// 3й блок
+.support-block3
+  background-image: url(../img/texture.jpg)
+  background-size: cover
+  background-position: center
+  p
+    text-align: left
+// 4й блок    
+.support-block4
+  background-image: url(../img/support-block4.jpg)
+  background-position: center
+  color: #fff
+  p
+    text-align: left
+// 5й блок
+.support-block5
+  background-image: url(../img/texture.jpg)
+  background-size: cover
+  background-position: center
+  h2
+    margin-bottom: 55px
+// Стили таблицы
+.support-table-block
+  margin: 0 auto
+  max-width: 750px
+  table
+    color: $accent
+    width: 100%
+    text-align: left
+    tr
+      background-color: $accent
+      td
+        padding-left: 60px
+        &:first-of-type
+          width: 57%
+          
+  thead
+    color: #fff
+    td
+      text-transform: uppercase
+      padding-top: 18px
+      padding-bottom: 17px
+      em(17)
+      font-weight: 700
+  tbody
+    font-family: $rlw
+    tr
+      background-color: rgba($accent,.3)
+      &:nth-of-type(even)
+        background-color: rgba($accent,.17)
+      td
+        padding-top: 15px
+        padding-bottom: 15px
+        +em(14)
+        font-weight: 500
+        &:last-of-type
+          font-family: $os 
+          &:before
+            content: "€ "
+            font-weight: 500
+// Страница - VERLEIH
+// 1й блок
+.verleih-block1
+  h2
+    margin-bottom: 45px
+// 2й блок 
+.verleih-block2
+  background-image: url(../img/texture.jpg)
+  padding-bottom: 60px
+  padding-top: 60px
+  h2
+    margin-bottom: 60px
+  &-cards
+    .card
+      &-top
+        background-color: $accent
+        color: #fff    
+      h4
+        +em(20)
+        font-weight: 700
+        position: relative
+        text-transform: uppercase
+        padding: 30px 80px 10px
+        margin-bottom: 13px
+        &:after
+          position: absolute
+          content: ""
+          left: 0
+          right: 0
+          bottom: 0
+          margin: auto
+          width: 50px
+          height: 1px
+          background-color: #fff
+      h6
+        +em(14)
+        font-family: $lt
+        margin-bottom: 14px
+      p
+        text-transform: uppercase
+        font-family: $lt
+        font-size: 13px
+        padding-bottom: 18px
+        margin-bottom: 0
+      .cost
+        display: inline-block
+        padding-right: 20px
+        margin-right: 12px
+        font-size: 20px
+        font-weight: 700
+        top: 1px
+        +pseudoa
+        &:after
+          right: 0
+          top: 5px
+          height: 15px
+          width: 15px
+          background-image: url(../img/euro.png)
+      .img
+        margin-top: -1px
+        height: 383px
+        border: #e5dcc3 solid 2px
+        box-shadow: 0 0 8px rgba(#000,.08), inset 0 0 8px rgba(#000,.08)
+        position: relative
+        img
+          height: 235px
+          margin: 80px auto 0
+// 4й блок
+.verleih-block4
+  padding-bottom: 50px
+  background-image: url(../img/texture.jpg)
+  p
+    text-align: left
+    &+h5
+      margin-top: 37px
+  h5
+    margin-bottom: 45px
+// Страница - CATALOGUE
+// 1й блок
+.catalogue-block1
+  padding-bottom: 70px
+  color: $accent
+  background-color: #e7e2d0
+  position: relative
+  
+  h2
+    margin-bottom: 87px
+  p
+    +em(15)
+    font-family: $rlw
+    text-align: left
+    font-weight: 500
+    margin-bottom: 37px
+    line-height: 1.6
+    max-width: 375px
+    &:last-of-type
+      margin-bottom: 0
+  &-right-img
+    border: rgba(#000,.18) solid 2px
+    img
+      position: relative
+      left: 22px
+      top: -25px
+  &-cover-img
+    position: absolute
+    bottom: 20px
+    left: 0
+    right: 0
+    
+// 2й блок
+.catalogue-block2
+  background-color: #e7e2d0
+  padding-top: 80px
+  padding-bottom: 50px
+.catalogue-items-block
+  ul
+  li
+    margin-bottom: 30px
+    height: 336px
+    background-image: url(../img/catalogue-texture.jpg)
+    background-size: cover
+    color: $accent
+    .img
+      max-width: 100%
+      float: left
+      +thumb(336)
+      width: 360px
+        
+    .catalogue-text
+      width: 700px
+      margin-left: 15px
+      padding-left: 15px
+      padding-right: 15px
+      max-width: 100%  
+      text-align: left
+      float: left
+      padding-top: 28px
+    h5
+      font-family: $c
+      font-weight: 700  
+      text-transform: uppercase
+      margin-bottom: 20px
+    h6
+      +em(12)
+      font-family: $lt
+      color: #8a7266
+      margin-bottom: 20px
+    p
+      font-family: $rlw
+      line-height: 1.6
+      font-weight: 500
+      +em(14)
+    .soft-text
+      color: #8a7266
+      margin-bottom: 30px
+    .mark
+      padding-left: 20px
+      +pseudob
+      margin-bottom: 27px
+      &:before
+        width: 6px
+        height: 6px
+        border-radius: 50%
+        background-color: $accent
+        left: 0
+        top: 9px
+@import "additions"
+@import "media"

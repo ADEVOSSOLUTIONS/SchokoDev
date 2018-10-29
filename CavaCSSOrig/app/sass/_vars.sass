@@ -1,0 +1,104 @@
+@import "bourbon"
+
+
+$default-font: "Cormorant", sans-serif
+// Переменные для шрифтов
+$c: "Cormorant", sans-serif
+$os: "OpenSans", sans-serif
+$rlw: "Raleway", sans-serif
+$ldg: "Ledger", sans-serif
+$lt: "Lato", sans-serif
+// Акцентный цвет
+$accent: #4c110a
+$placeholder: #666
+
+// Белый цвет из макета
+$wh: #ece8d5
+
+
+
+
+
+// Миксины
+$middle: 768px
+$large: 1024px
+@mixin respond-to($media)
+  @if $media == mobile
+    @media only screen and (max-width: $large - 1)
+      @content
+  @else if $media == tab
+    @media only screen and (min-width: $middle) and (max-width: $large - 1)
+      @content
+  @else if $media == laptop
+    @media only screen and (min-width: $large) and (max-width:1200px)
+      @content
+
+=placeholder
+  &.placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+  &::-webkit-input-placeholder
+    @content
+
+=ofc
+  object-fit: cover
+=circle
+  border-radius: 50%
+=em($size)
+  font-size: ($size/16) *1em
+=dibfix
+  letter-spacing: -0.27em
+  li
+    letter-spacing: normal
+    display: inline-block
+    vertical-align: top
+=dibfixa($align)
+  text-align: $align
+  letter-spacing: -0.25em
+  li
+    letter-spacing: normal
+    display: inline-block
+    vertical-align: top
+=pseudo
+  position: relative
+  &:after,&:before
+    content: ''
+    position: absolute
+=pseudoa
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+=pseudob
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+=thumb($height)
+  position: relative
+  width: 100%
+  height: $height*1px
+  img
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+=mlra
+  margin-left: auto
+  margin-right: auto
+=abs-center
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  margin: auto
+=bxsh($offset,$size,$opacity)
+  box-shadow: $offset*1px $offset*1px $size*1px rgba(#000, $opacity/100) 
